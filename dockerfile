@@ -1,4 +1,4 @@
-from python:3.10
+FROM python:3.10
 RUN apt-get update -y
 WORKDIR /app
 RUN python -m pip install --upgrade pip
