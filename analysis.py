@@ -11,7 +11,7 @@ def process_data(df,noc):
    m=pd.get_dummies(df['Medal'],dtype=int)
    df=pd.concat([df,m],axis=1)
    df=pd.merge(df,noc,on='NOC',how='left')
-   df=df.fillna({'Height':df['Height'].mean(),'Weight':df['Weight'].mean(),'Age':df['Age'].mean()}, inplace=True )
+   df.fillna({'Height':df['Height'].mean(),'Weight':df['Weight'].mean(),'Age':df['Age'].mean()}, inplace=True )
    return df
 
 
